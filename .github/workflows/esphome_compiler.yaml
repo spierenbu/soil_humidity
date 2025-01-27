@@ -24,10 +24,10 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: firmware
-          path: moisture-sensor-francisco/*.bin  # Collect both .factory.bin and .ota.bin files from the output directory
+          path: moisture-sensor-francisco-esp32s2/*.bin  # Collect both .factory.bin and .ota.bin files from the output directory
 
       - name: Upload Manifest File (Optional)
         uses: actions/upload-artifact@v3
         with:
           name: manifest
-          path: moisture-sensor-francisco/manifest.json  # Upload the manifest file if needed
+          path: moisture-sensor-francisco-esp32s2/manifest.json  # Upload the manifest file if needed
