@@ -1,0 +1,28 @@
+name: ESPHome Compile
+
+on:
+  push:
+    paths:
+      - 'config/**'  # Trigger on YAML changes
+  workflow_dispatch: # Allow manual runs from GitHub Actions interface
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Set up Docker
+      uses: docker/setup-qemu-action@v2
+
+    - name: Run ESPHome Docker Container
+      run: |
+        docker run --rm -v "${{ github.workspace }}/config:/config" esphome/esphome compile config/moisture_sensor.yaml
+
+    - name: Upload Compiled Binary
+      uses: actions/upload-artifact@v3
+      with:
+        name: firmware
+        path: config/.esphome/build/*.bin
