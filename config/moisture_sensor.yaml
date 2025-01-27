@@ -3,10 +3,10 @@ esphome:
   friendly_name: Moisture Francisco
 
 esp32: 
-	board: lolin_s2_mini 
-	variant: esp32s2 
-	framework: 
-		type: esp-idf
+  board: lolin_s2_mini 
+  variant: esp32s2 
+  framework: 
+    type: esp-idf
 
 # To be able to get logs from the device via serial and api.
 logger:
