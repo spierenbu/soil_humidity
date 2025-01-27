@@ -25,16 +25,11 @@ wifi:
   ap:
 
 sensor:
-  platform: adc
-  pin: 3
-  id: moisture_sensor
-  name: "Soil Moisture"
-  unit_of_measurement: "%"
-  update_interval: 10s
-  #filters:
-  #    - calibrate_linear:
-  #        - 0.825 -> 0.0
-  #        - 0.425 -> 100.0
+  - platform: adc
+    pin: 3
+    name: "Soil Moisture"
+    update_interval: 10s
+    attenuation: 11db
 
 captive_portal:
 web_server:
