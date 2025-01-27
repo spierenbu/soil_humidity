@@ -24,6 +24,9 @@ wifi:
   password: "esp12345"
   ap:
 
+captive_portal:
+web_server:
+
 sensor:
   - platform: adc
     pin: 3
@@ -49,6 +52,3 @@ sensor:
 #deep_sleep:
 #  run_duration: 1min
 #  sleep_duration: 240min
-    
-captive_portal:
-web_server:
