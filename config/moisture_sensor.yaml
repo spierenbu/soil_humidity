@@ -31,10 +31,10 @@ sensor:
   name: "Soil Moisture"
   unit_of_measurement: "%"
   update_interval: 10s
-  filters:
-      - calibrate_linear:
-          - 0.825 -> 0.0
-          - 0.425 -> 100.0
+  #filters:
+  #    - calibrate_linear:
+  #        - 0.825 -> 0.0
+  #        - 0.425 -> 100.0
 
 captive_portal:
 web_server:
