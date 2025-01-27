@@ -29,21 +29,21 @@ sensor:
     pin: 3
     name: "Soil Moisture"
     update_interval: 10s
-    unit_of_measurement: "%"
+#    unit_of_measurement: "%"
     attenuation: 11db
-    filters:
-    - median:
-        window_size: 7
-        send_every: 4
-        send_first_at: 1
-    - calibrate_linear:
-        - 0.912 -> 100.00
-        - 2.52 -> 0.00
-    - lambda: |
-        if (x < 0) return 0; 
-        else if (x > 100) return 100;
-        else return (x);
-    accuracy_decimals: 0
+#    filters:
+#    - median:
+#        window_size: 7
+#        send_every: 4
+#        send_first_at: 1
+#    - calibrate_linear:
+#        - 0.912 -> 100.00
+#        - 2.52 -> 0.00
+#    - lambda: |
+#        if (x < 0) return 0; 
+#        else if (x > 100) return 100;
+#        else return (x);
+#    accuracy_decimals: 0
     
 
 captive_portal:
