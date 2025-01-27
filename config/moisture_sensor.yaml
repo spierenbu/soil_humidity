@@ -44,7 +44,11 @@ sensor:
 #        else if (x > 100) return 100;
 #        else return (x);
 #    accuracy_decimals: 0
-    
 
+# Keep commented
+#deep_sleep:
+#  run_duration: 1min
+#  sleep_duration: 240min
+    
 captive_portal:
 web_server:
