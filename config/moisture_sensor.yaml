@@ -26,7 +26,7 @@ wifi:
 
 sensor:
   platform: adc
-  pin: A0
+  pin: 3
   id: moisture_sensor
   name: "Soil Moisture"
   unit_of_measurement: "%"
