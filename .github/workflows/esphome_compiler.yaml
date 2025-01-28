@@ -24,4 +24,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: firmware
-          path: moisture-sensor-name-esp32s2/*.bin  # REPLACE your name here
+          path: moisture-sensor-lucas-esp32s2/*.bin  # REPLACE your name here
